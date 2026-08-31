@@ -1,14 +1,17 @@
 package com.sistemaFacturacion.Mambo.auth.response;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class AuthResponse {
-String token;
+    private String token;
+    private String numeroDocumento;
+    private String nombre;
+    private String rol;
 }

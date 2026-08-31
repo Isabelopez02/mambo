@@ -15,11 +15,11 @@ import com.sistemaFacturacion.Mambo.auth.service.AuthService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin(origins = "*")
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
-    private final AuthService authService; // Aquí se maneja la lógica de login y registro
+    private final AuthService authService;
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
@@ -32,6 +32,4 @@ public class AuthController {
         AuthResponse response = authService.register(request);
         return ResponseEntity.ok(response);
     }
-
-    
 }

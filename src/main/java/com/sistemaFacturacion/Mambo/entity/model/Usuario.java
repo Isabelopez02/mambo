@@ -59,6 +59,7 @@ public class Usuario implements UserDetails {
     @Column(nullable = false, length = 100)
     private String contra;
 
+    @Builder.Default
     private boolean enabled = true;
 
     // 👉 Importante: implementación para Spring Security
